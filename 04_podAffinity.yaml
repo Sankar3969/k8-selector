@@ -10,7 +10,7 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
       - labelSelector:
           matchExpressions:
-          - key: hardware
+          - key: env
             operator: In
             values:
             - pod-3  
