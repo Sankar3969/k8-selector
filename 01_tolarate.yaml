@@ -5,11 +5,21 @@ metadata:
   labels:
     env: test
 spec:
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+          matchExpressions:
+          - key: hardware
+            operator: In
+            values:
+            - gpu    
   containers:
   - name: nginx
     image: nginx
-  nodeSelector:
-    hardware: gpu
+  # nodeSelector:
+  #   hardware: gpu
   tolerations:
   - key: "hardware"
     operator: "Equal"
