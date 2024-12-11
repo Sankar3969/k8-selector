@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: pod-3
   labels:
-    env: test
+    env: test3
 spec:
   affinity:
     nodeAffinity:
