@@ -9,7 +9,7 @@ spec:
   - name: nginx
     image: nginx
   nodeSelector:
-    harware: gpu
+    hardware: gpu
   tolerations:
   - key: "hardware"
     operator: "Equal"
